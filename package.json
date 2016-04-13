@@ -11,5 +11,8 @@
   "license": "ISC",
   "dependencies": {
     "lodash": "^4.11.0"
+  },
+  "jspm": {
+    "format":"es6"
   }
 }
