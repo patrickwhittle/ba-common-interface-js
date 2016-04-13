@@ -1,5 +1,5 @@
 import isObjectLike from 'lodash/isObjectLike'
-import isArray from 'lodash/Array'
+import isArray from 'lodash/isArray'
 import 'object-assign'
 
 export default class Restable {
