@@ -81,14 +81,6 @@ export default class extends Restable {
     this._mealplanAdultPrice = mealplanAdultPrice
   }
 
-  get mealplanAdultPriceOriginal() {
-    return this._mealplanAdultPriceOriginal
-  }
-
-  set mealplanAdultPriceOriginal(mealplanAdultPriceOriginal) {
-    this._mealplanAdultPriceOriginal = mealplanAdultPriceOriginal
-  }
-
   get mealplanBookassistCommission() {
     return this._mealplanBookassistCommission
   }
@@ -111,14 +103,6 @@ export default class extends Restable {
 
   set mealplanChildrenPrice(mealplanChildrenPrice) {
     this._mealplanChildrenPrice = mealplanChildrenPrice
-  }
-
-  get mealplanChildrenPriceOriginal() {
-    return this._mealplanChildrenPriceOriginal
-  }
-
-  set mealplanChildrenPriceOriginal(mealplanChildrenPriceOriginal) {
-    this._mealplanChildrenPriceOriginal = mealplanChildrenPriceOriginal
   }
 
   get mealplanDeposit() {
@@ -145,28 +129,12 @@ export default class extends Restable {
     this._extraAdultPrice = extraAdultPrice
   }
 
-  get extraAdultPriceOriginal() {
-    return this._extraAdultPriceOriginal
-  }
-
-  set extraAdultPriceOriginal(extraAdultPriceOriginal) {
-    this._extraAdultPriceOriginal = extraAdultPriceOriginal
-  }
-
   get extraChildrenPrices() {
     return this._extraChildrenPrices
   }
 
   set extraChildrenPrices(extraChildrenPrices) {
     this._extraChildrenPrices = extraChildrenPrices
-  }
-
-  get extraChildrenPricesOriginal() {
-    return this._extraChildrenPricesOriginal
-  }
-
-  set extraChildrenPricesOriginal(extraChildrenPricesOriginal) {
-    this._extraChildrenPricesOriginal = extraChildrenPricesOriginal
   }
 
   get extraChildrenIds() {

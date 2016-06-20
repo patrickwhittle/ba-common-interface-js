@@ -24,11 +24,11 @@ export default class extends Restable {
 
   set descriptions(descriptions) {
     if ( isObject(descriptions) ) {
-      descriptions = mapValues(descriptions, (iteratee) => {
-        if ( isPlainObject(iteratee) ) {
-          return new AddOnI18n(iteratee)
+      descriptions = mapValues(descriptions, (value) => {
+        if ( isPlainObject(value) ) {
+          return new AddOnI18n(value)
         }
-        return iteratee
+        return value
       })
     }
     this._descriptions = descriptions

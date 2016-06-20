@@ -48,11 +48,11 @@ export default class extends Restable {
 
   set termsInt(termsInt) {
     if ( isArray(termsInt) ) {
-      termsInt = termsInt.map((iteratee) => {
-        if ( isPlainObject(iteratee) ) {
-          return new TermsConditionsInt(iteratee)
+      termsInt = termsInt.map((item) => {
+        if ( isPlainObject(item) ) {
+          return new TermsConditionsInt(item)
         }
-        return iteratee
+        return item
       })
     }
     this._termsInt = termsInt

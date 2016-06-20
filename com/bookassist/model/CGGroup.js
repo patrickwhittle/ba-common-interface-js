@@ -88,11 +88,11 @@ export default class extends Restable {
 
   set hotels(hotels) {
     if ( isArray(hotels) ) {
-      hotels = hotels.map((iteratee) => {
-        if ( isPlainObject(iteratee) ) {
-          return new CGGroup$CGGroupHotel(iteratee)
+      hotels = hotels.map((item) => {
+        if ( isPlainObject(item) ) {
+          return new CGGroup$CGGroupHotel(item)
         }
-        return iteratee
+        return item
       })
     }
     this._hotels = hotels

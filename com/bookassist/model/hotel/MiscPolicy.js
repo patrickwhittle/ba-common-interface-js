@@ -72,11 +72,11 @@ export default class extends Restable {
 
   set policiesInt(policiesInt) {
     if ( isArray(policiesInt) ) {
-      policiesInt = policiesInt.map((iteratee) => {
-        if ( isPlainObject(iteratee) ) {
-          return new MiscPolicyInt(iteratee)
+      policiesInt = policiesInt.map((item) => {
+        if ( isPlainObject(item) ) {
+          return new MiscPolicyInt(item)
         }
-        return iteratee
+        return item
       })
     }
     this._policiesInt = policiesInt

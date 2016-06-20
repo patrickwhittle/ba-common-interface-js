@@ -155,11 +155,11 @@ export default class extends Restable {
 
   set descriptions(descriptions) {
     if ( isObject(descriptions) ) {
-      descriptions = mapValues(descriptions, (iteratee) => {
-        if ( isPlainObject(iteratee) ) {
-          return new RoomDescription(iteratee)
+      descriptions = mapValues(descriptions, (value) => {
+        if ( isPlainObject(value) ) {
+          return new RoomDescription(value)
         }
-        return iteratee
+        return value
       })
     }
     this._descriptions = descriptions
@@ -187,11 +187,11 @@ export default class extends Restable {
 
   set nightPrices(nightPrices) {
     if ( isArray(nightPrices) ) {
-      nightPrices = nightPrices.map((iteratee) => {
-        if ( isPlainObject(iteratee) ) {
-          return new NightPrice(iteratee)
+      nightPrices = nightPrices.map((item) => {
+        if ( isPlainObject(item) ) {
+          return new NightPrice(item)
         }
-        return iteratee
+        return item
       })
     }
     this._nightPrices = nightPrices
@@ -258,11 +258,11 @@ export default class extends Restable {
 
   set addons(addons) {
     if ( isArray(addons) ) {
-      addons = addons.map((iteratee) => {
-        if ( isPlainObject(iteratee) ) {
-          return new RoomAddOn(iteratee)
+      addons = addons.map((item) => {
+        if ( isPlainObject(item) ) {
+          return new RoomAddOn(item)
         }
-        return iteratee
+        return item
       })
     }
     this._addons = addons
@@ -282,11 +282,11 @@ export default class extends Restable {
 
   set cancellationPolicies(cancellationPolicies) {
     if ( isObject(cancellationPolicies) ) {
-      cancellationPolicies = mapValues(cancellationPolicies, (iteratee) => {
-        if ( isPlainObject(iteratee) ) {
-          return new RoomCancellationPolicy(iteratee)
+      cancellationPolicies = mapValues(cancellationPolicies, (value) => {
+        if ( isPlainObject(value) ) {
+          return new RoomCancellationPolicy(value)
         }
-        return iteratee
+        return value
       })
     }
     this._cancellationPolicies = cancellationPolicies
@@ -298,11 +298,11 @@ export default class extends Restable {
 
   set paymentPolicies(paymentPolicies) {
     if ( isObject(paymentPolicies) ) {
-      paymentPolicies = mapValues(paymentPolicies, (iteratee) => {
-        if ( isPlainObject(iteratee) ) {
-          return new RoomPaymentPolicy(iteratee)
+      paymentPolicies = mapValues(paymentPolicies, (value) => {
+        if ( isPlainObject(value) ) {
+          return new RoomPaymentPolicy(value)
         }
-        return iteratee
+        return value
       })
     }
     this._paymentPolicies = paymentPolicies
@@ -314,11 +314,11 @@ export default class extends Restable {
 
   set occupancyPolicies(occupancyPolicies) {
     if ( isObject(occupancyPolicies) ) {
-      occupancyPolicies = mapValues(occupancyPolicies, (iteratee) => {
-        if ( isPlainObject(iteratee) ) {
-          return new RoomOccupancyPolicy(iteratee)
+      occupancyPolicies = mapValues(occupancyPolicies, (value) => {
+        if ( isPlainObject(value) ) {
+          return new RoomOccupancyPolicy(value)
         }
-        return iteratee
+        return value
       })
     }
     this._occupancyPolicies = occupancyPolicies
@@ -330,11 +330,11 @@ export default class extends Restable {
 
   set miscPolicies(miscPolicies) {
     if ( isObject(miscPolicies) ) {
-      miscPolicies = mapValues(miscPolicies, (iteratee) => {
-        if ( isPlainObject(iteratee) ) {
-          return new RoomMiscPolicy(iteratee)
+      miscPolicies = mapValues(miscPolicies, (value) => {
+        if ( isPlainObject(value) ) {
+          return new RoomMiscPolicy(value)
         }
-        return iteratee
+        return value
       })
     }
     this._miscPolicies = miscPolicies
@@ -346,11 +346,11 @@ export default class extends Restable {
 
   set properties(properties) {
     if ( isArray(properties) ) {
-      properties = properties.map((iteratee) => {
-        if ( isPlainObject(iteratee) ) {
-          return new RoomProperty(iteratee)
+      properties = properties.map((item) => {
+        if ( isPlainObject(item) ) {
+          return new RoomProperty(item)
         }
-        return iteratee
+        return item
       })
     }
     this._properties = properties
@@ -362,11 +362,11 @@ export default class extends Restable {
 
   set travelerContact(travelerContact) {
     if ( isArray(travelerContact) ) {
-      travelerContact = travelerContact.map((iteratee) => {
-        if ( isPlainObject(iteratee) ) {
-          return new RoomTravelerContact(iteratee)
+      travelerContact = travelerContact.map((item) => {
+        if ( isPlainObject(item) ) {
+          return new RoomTravelerContact(item)
         }
-        return iteratee
+        return item
       })
     }
     this._travelerContact = travelerContact

@@ -64,11 +64,11 @@ export default class extends Restable {
 
   set mealplanGuests(mealplanGuests) {
     if ( isArray(mealplanGuests) ) {
-      mealplanGuests = mealplanGuests.map((iteratee) => {
-        if ( isPlainObject(iteratee) ) {
-          return new MealplanGuest(iteratee)
+      mealplanGuests = mealplanGuests.map((item) => {
+        if ( isPlainObject(item) ) {
+          return new MealplanGuest(item)
         }
-        return iteratee
+        return item
       })
     }
     this._mealplanGuests = mealplanGuests

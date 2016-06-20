@@ -254,11 +254,11 @@ export default class extends Restable {
 
   set translations(translations) {
     if ( isObject(translations) ) {
-      translations = mapValues(translations, (iteratee) => {
-        if ( isPlainObject(iteratee) ) {
-          return new RoomPriceInt(iteratee)
+      translations = mapValues(translations, (value) => {
+        if ( isPlainObject(value) ) {
+          return new RoomPriceInt(value)
         }
-        return iteratee
+        return value
       })
     }
     this._translations = translations

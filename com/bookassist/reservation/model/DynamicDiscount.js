@@ -89,36 +89,4 @@ export default class extends Restable {
     this._recurring = recurring
   }
 
-  get applyToExtraBeds() {
-    return this._applyToExtraBeds
-  }
-
-  set applyToExtraBeds(applyToExtraBeds) {
-    this._applyToExtraBeds = applyToExtraBeds
-  }
-
-  get applyToMealPlan() {
-    return this._applyToMealPlan
-  }
-
-  set applyToMealPlan(applyToMealPlan) {
-    this._applyToMealPlan = applyToMealPlan
-  }
-
-  get discountValue() {
-    return this._discountValue
-  }
-
-  set discountValue(discountValue) {
-    this._discountValue = discountValue
-  }
-
-  get defaultAvailability() {
-    return this._defaultAvailability
-  }
-
-  set defaultAvailability(defaultAvailability) {
-    this._defaultAvailability = defaultAvailability
-  }
-
 }

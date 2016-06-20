@@ -120,11 +120,11 @@ export default class extends Restable {
 
   set roomPrices(roomPrices) {
     if ( isArray(roomPrices) ) {
-      roomPrices = roomPrices.map((iteratee) => {
-        if ( isPlainObject(iteratee) ) {
-          return new RoomPrice(iteratee)
+      roomPrices = roomPrices.map((item) => {
+        if ( isPlainObject(item) ) {
+          return new RoomPrice(item)
         }
-        return iteratee
+        return item
       })
     }
     this._roomPrices = roomPrices

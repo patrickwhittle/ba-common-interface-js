@@ -77,11 +77,11 @@ export default class extends Restable {
 
   set discountDescriptions(discountDescriptions) {
     if ( isArray(discountDescriptions) ) {
-      discountDescriptions = discountDescriptions.map((iteratee) => {
-        if ( isPlainObject(iteratee) ) {
-          return new DiscountDescription(iteratee)
+      discountDescriptions = discountDescriptions.map((item) => {
+        if ( isPlainObject(item) ) {
+          return new DiscountDescription(item)
         }
-        return iteratee
+        return item
       })
     }
     this._discountDescriptions = discountDescriptions
@@ -187,33 +187,17 @@ export default class extends Restable {
     this._numSetDates = numSetDates
   }
 
-  get applyToExtraBeds() {
-    return this._applyToExtraBeds
-  }
-
-  set applyToExtraBeds(applyToExtraBeds) {
-    this._applyToExtraBeds = applyToExtraBeds
-  }
-
-  get applyToMealPlan() {
-    return this._applyToMealPlan
-  }
-
-  set applyToMealPlan(applyToMealPlan) {
-    this._applyToMealPlan = applyToMealPlan
-  }
-
   get duplicates() {
     return this._duplicates
   }
 
   set duplicates(duplicates) {
     if ( isArray(duplicates) ) {
-      duplicates = duplicates.map((iteratee) => {
-        if ( isPlainObject(iteratee) ) {
-          return new DiscountDuplicate(iteratee)
+      duplicates = duplicates.map((item) => {
+        if ( isPlainObject(item) ) {
+          return new DiscountDuplicate(item)
         }
-        return iteratee
+        return item
       })
     }
     this._duplicates = duplicates

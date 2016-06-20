@@ -41,12 +41,4 @@ export default class extends Restable {
     this._type = type
   }
 
-  get guideId() {
-    return this._guideId
-  }
-
-  set guideId(guideId) {
-    this._guideId = guideId
-  }
-
 }

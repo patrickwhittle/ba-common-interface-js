@@ -159,11 +159,11 @@ export default class extends Restable {
 
   set addons(addons) {
     if ( isArray(addons) ) {
-      addons = addons.map((iteratee) => {
-        if ( isPlainObject(iteratee) ) {
-          return new AddOn(iteratee)
+      addons = addons.map((item) => {
+        if ( isPlainObject(item) ) {
+          return new AddOn(item)
         }
-        return iteratee
+        return item
       })
     }
     this._addons = addons
@@ -201,11 +201,11 @@ export default class extends Restable {
 
   set rooms(rooms) {
     if ( isArray(rooms) ) {
-      rooms = rooms.map((iteratee) => {
-        if ( isPlainObject(iteratee) ) {
-          return new Room(iteratee)
+      rooms = rooms.map((item) => {
+        if ( isPlainObject(item) ) {
+          return new Room(item)
         }
-        return iteratee
+        return item
       })
     }
     this._rooms = rooms
@@ -583,25 +583,17 @@ export default class extends Restable {
     this._leavesIframe = leavesIframe
   }
 
-  get businessOrLeisure() {
-    return this._businessOrLeisure
-  }
-
-  set businessOrLeisure(businessOrLeisure) {
-    this._businessOrLeisure = businessOrLeisure
-  }
-
   get miscPolicy() {
     return this._miscPolicy
   }
 
   set miscPolicy(miscPolicy) {
     if ( isObject(miscPolicy) ) {
-      miscPolicy = mapValues(miscPolicy, (iteratee) => {
-        if ( isPlainObject(iteratee) ) {
-          return new HotelMiscPolicy(iteratee)
+      miscPolicy = mapValues(miscPolicy, (value) => {
+        if ( isPlainObject(value) ) {
+          return new HotelMiscPolicy(value)
         }
-        return iteratee
+        return value
       })
     }
     this._miscPolicy = miscPolicy
@@ -613,11 +605,11 @@ export default class extends Restable {
 
   set paymentPolicy(paymentPolicy) {
     if ( isObject(paymentPolicy) ) {
-      paymentPolicy = mapValues(paymentPolicy, (iteratee) => {
-        if ( isPlainObject(iteratee) ) {
-          return new HotelPaymentPolicy(iteratee)
+      paymentPolicy = mapValues(paymentPolicy, (value) => {
+        if ( isPlainObject(value) ) {
+          return new HotelPaymentPolicy(value)
         }
-        return iteratee
+        return value
       })
     }
     this._paymentPolicy = paymentPolicy
@@ -629,22 +621,14 @@ export default class extends Restable {
 
   set termsConditions(termsConditions) {
     if ( isObject(termsConditions) ) {
-      termsConditions = mapValues(termsConditions, (iteratee) => {
-        if ( isPlainObject(iteratee) ) {
-          return new HotelTermsConditions(iteratee)
+      termsConditions = mapValues(termsConditions, (value) => {
+        if ( isPlainObject(value) ) {
+          return new HotelTermsConditions(value)
         }
-        return iteratee
+        return value
       })
     }
     this._termsConditions = termsConditions
-  }
-
-  get conditions() {
-    return this._conditions
-  }
-
-  set conditions(conditions) {
-    this._conditions = conditions
   }
 
   get device() {
@@ -674,14 +658,6 @@ export default class extends Restable {
 
   set roomLockTimeout(roomLockTimeout) {
     this._roomLockTimeout = roomLockTimeout
-  }
-
-  get bookingType() {
-    return this._bookingType
-  }
-
-  set bookingType(bookingType) {
-    this._bookingType = bookingType
   }
 
 }

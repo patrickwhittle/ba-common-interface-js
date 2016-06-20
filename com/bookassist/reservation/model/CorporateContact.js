@@ -33,14 +33,6 @@ export default class extends Restable {
     this._companyCategory = companyCategory
   }
 
-  get companyEmail() {
-    return this._companyEmail
-  }
-
-  set companyEmail(companyEmail) {
-    this._companyEmail = companyEmail
-  }
-
   get countryCode() {
     return this._countryCode
   }

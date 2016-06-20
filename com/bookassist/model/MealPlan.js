@@ -87,11 +87,11 @@ export default class extends Restable {
 
   set mealPlanGuests(mealPlanGuests) {
     if ( isArray(mealPlanGuests) ) {
-      mealPlanGuests = mealPlanGuests.map((iteratee) => {
-        if ( isPlainObject(iteratee) ) {
-          return new MealPlanGuest(iteratee)
+      mealPlanGuests = mealPlanGuests.map((item) => {
+        if ( isPlainObject(item) ) {
+          return new MealPlanGuest(item)
         }
-        return iteratee
+        return item
       })
     }
     this._mealPlanGuests = mealPlanGuests
@@ -119,11 +119,11 @@ export default class extends Restable {
 
   set translations(translations) {
     if ( isArray(translations) ) {
-      translations = translations.map((iteratee) => {
-        if ( isPlainObject(iteratee) ) {
-          return new MealPlanTranslation(iteratee)
+      translations = translations.map((item) => {
+        if ( isPlainObject(item) ) {
+          return new MealPlanTranslation(item)
         }
-        return iteratee
+        return item
       })
     }
     this._translations = translations

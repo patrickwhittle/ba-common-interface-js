@@ -161,20 +161,4 @@ export default class extends Restable {
     this._customerId = customerId
   }
 
-  get englishFirstName() {
-    return this._englishFirstName
-  }
-
-  set englishFirstName(englishFirstName) {
-    this._englishFirstName = englishFirstName
-  }
-
-  get englishLastName() {
-    return this._englishLastName
-  }
-
-  set englishLastName(englishLastName) {
-    this._englishLastName = englishLastName
-  }
-
 }

@@ -56,11 +56,11 @@ export default class extends Restable {
 
   set listValues(listValues) {
     if ( isArray(listValues) ) {
-      listValues = listValues.map((iteratee) => {
-        if ( isPlainObject(iteratee) ) {
-          return new BalanceDue$BalanceDueValue(iteratee)
+      listValues = listValues.map((item) => {
+        if ( isPlainObject(item) ) {
+          return new BalanceDue$BalanceDueValue(item)
         }
-        return iteratee
+        return item
       })
     }
     this._listValues = listValues
