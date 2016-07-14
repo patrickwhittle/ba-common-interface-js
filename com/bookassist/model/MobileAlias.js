@@ -4,7 +4,7 @@ import mapValues from 'lodash/mapValues'
 import isObject from 'lodash/isObject'
 import isArray from 'lodash/isArray'
 
-export default class extends Restable {
+class MobileAlias extends Restable {
 
   constructor(obj) {
     super()
@@ -138,3 +138,9 @@ export default class extends Restable {
   }
 
 }
+
+MobileAlias.DEFAULT_BASSIST_DOMAIN = "http://m.bookassist.com/"
+MobileAlias.DEFAULT_PRICE_GROUP = 2
+MobileAlias.DEFAULT_SERVICE_MODEL = 5
+
+export default MobileAlias

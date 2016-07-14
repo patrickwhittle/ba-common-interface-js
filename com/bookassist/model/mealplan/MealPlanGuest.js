@@ -5,7 +5,7 @@ import mapValues from 'lodash/mapValues'
 import isObject from 'lodash/isObject'
 import isArray from 'lodash/isArray'
 
-export default class extends Restable {
+class MealPlanGuest extends Restable {
 
   constructor(obj) {
     super()
@@ -136,3 +136,11 @@ export default class extends Restable {
   }
 
 }
+
+MealPlanGuest.TYPE_DEFAULT = 0
+MealPlanGuest.TYPE_LINK_AMOUNT_ASC = 1
+MealPlanGuest.TYPE_LINK_AMOUNT_DESC = 3
+MealPlanGuest.TYPE_LINK_PERCENT_ASC = 2
+MealPlanGuest.TYPE_LINK_PERCENT_DESC = 4
+
+export default MealPlanGuest

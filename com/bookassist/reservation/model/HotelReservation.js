@@ -22,7 +22,7 @@ import mapValues from 'lodash/mapValues'
 import isObject from 'lodash/isObject'
 import isArray from 'lodash/isArray'
 
-export default class extends Restable {
+class HotelReservation extends Restable {
 
   constructor(obj) {
     super()
@@ -661,4 +661,8 @@ export default class extends Restable {
   }
 
 }
+
+HotelReservation.MAX_LENGTH_BOOKING_REFERECE = 20
+
+export default HotelReservation
 // missing get and/or set for pms

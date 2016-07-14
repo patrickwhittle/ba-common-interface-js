@@ -4,7 +4,7 @@ import mapValues from 'lodash/mapValues'
 import isObject from 'lodash/isObject'
 import isArray from 'lodash/isArray'
 
-export default class extends Restable {
+class PointsHotelConfig extends Restable {
 
   constructor(obj) {
     super()
@@ -106,3 +106,13 @@ export default class extends Restable {
   }
 
 }
+
+PointsHotelConfig.BY_PERCENT = "by_percent"
+PointsHotelConfig.NIGHTLY_ACCUMULATE = "nightly_accumulate"
+PointsHotelConfig.NIGHTLY_USE = "nightly_use"
+PointsHotelConfig.NO_POINTS = "no_points"
+PointsHotelConfig.PACKAGE = "package"
+PointsHotelConfig.REWARD = "reward"
+PointsHotelConfig.VOUCHER = "voucher"
+
+export default PointsHotelConfig

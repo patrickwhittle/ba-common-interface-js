@@ -4,7 +4,7 @@ import mapValues from 'lodash/mapValues'
 import isObject from 'lodash/isObject'
 import isArray from 'lodash/isArray'
 
-export default class extends Restable {
+class Deposit extends Restable {
 
   constructor(obj) {
     super()
@@ -74,3 +74,19 @@ export default class extends Restable {
   }
 
 }
+
+Deposit.CLARION_DEPOSIT_MODEL = 4
+Deposit.COMMISSION = "COMMISSION"
+Deposit.CORPORATE = "CORPORATE"
+Deposit.MERCHANT = "MERCHANT"
+Deposit.NO_DEPOSIT_REQUIRED = 0
+Deposit.PAID = "PAID"
+Deposit.PERCENT_WITH_FIXED_PERCENT_PAYMENT_SCHEDULE = 2
+Deposit.PURCHASE_TYPE_BOOKING = 1
+Deposit.PURCHASE_TYPE_BOTH_BOOKING_VOUCHER = 3
+Deposit.PURCHASE_TYPE_VOUCHER = 2
+Deposit.STANDARD_PERCENT_DEPOSIT = 1
+Deposit.VOUCHER_REDEEMED = "VOUCHER_REDEEMED"
+Deposit.VOUCHER_WITH_NO_DEPOSIT = 3
+
+export default Deposit

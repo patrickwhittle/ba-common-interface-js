@@ -4,7 +4,7 @@ import mapValues from 'lodash/mapValues'
 import isObject from 'lodash/isObject'
 import isArray from 'lodash/isArray'
 
-export default class extends Restable {
+class VoucherMaxValues extends Restable {
 
   constructor(obj) {
     super()
@@ -58,3 +58,8 @@ export default class extends Restable {
   }
 
 }
+
+VoucherMaxValues.DEFAULT_MAX_EVOUCHER_VALUE = "300"
+VoucherMaxValues.DEFAULT_MAX_PACKAGE_VOUCHER_VALUE = 500
+
+export default VoucherMaxValues

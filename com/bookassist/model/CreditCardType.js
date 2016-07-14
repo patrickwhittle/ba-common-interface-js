@@ -4,7 +4,7 @@ import mapValues from 'lodash/mapValues'
 import isObject from 'lodash/isObject'
 import isArray from 'lodash/isArray'
 
-export default class extends Restable {
+class CreditCardType extends Restable {
 
   constructor(obj) {
     super()
@@ -42,3 +42,5 @@ export default class extends Restable {
   }
 
 }
+
+export default CreditCardType

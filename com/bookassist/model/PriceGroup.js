@@ -5,7 +5,7 @@ import mapValues from 'lodash/mapValues'
 import isObject from 'lodash/isObject'
 import isArray from 'lodash/isArray'
 
-export default class extends Restable {
+class PriceGroup extends Restable {
 
   constructor(obj) {
     super()
@@ -131,3 +131,9 @@ export default class extends Restable {
   }
 
 }
+
+PriceGroup.BOOKIT = 1
+PriceGroup.CONDUIT = 2
+PriceGroup.CORPORATE = 4
+
+export default PriceGroup
