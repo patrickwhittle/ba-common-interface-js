@@ -14,10 +14,6 @@
     "lodash": "^4.11.0"
   },
   "jspm": {
-    "format": "es6",
-    "dependencies": {
-      "isomorphic-fetch": "npm:isomorphic-fetch@^2.2.1",
-      "lodash": "npm:lodash@^4.11.1"
-    }
+    "format": "es6
   }
 }
